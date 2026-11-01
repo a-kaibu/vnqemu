@@ -1,4 +1,16 @@
-# vnvm
+# vnqemu
+
+vnvm の QEMU 版 (フルシステム QEMU で Ubuntu 26.04 + Wine をブラウザ内で起動する方式) を
+[a-kaibu/vnvm](https://github.com/a-kaibu/vnvm) から移したリポジトリです。2026-10-28 に
+Hangover 方式 (Wine の unix 側を wasm にビルドし、ゲームと i386 PE DLL だけを x86→wasm JIT
+で動かす) へ切り替えたため、こちらは互換用・記録用として置いています。履歴は vnvm の
+初期コミットから QEMU 版の最後 (c41b604) までと、その後 vnvm で QEMU 側に入った変更
+(jit-hot、zstd チャンク) です。以下の説明やパスは vnvm 時代のままです (コマンド名・
+ストアの形式は vnvm と共通)。
+
+---
+
+# vnvm (QEMU 版)
 
 ブラウザの中で x86_64 の Linux VM を動かし、その上で vnbox と同じ Wine でビジュアルノベルを
 動かすための実験リポジトリです。ゲストは無改造の Ubuntu 26.04 で、ディスクはサーバから
